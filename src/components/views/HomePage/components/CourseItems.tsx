@@ -51,7 +51,7 @@ const data = [
 function CourseItems() {
   return (
     <List
-      className="w-100"
+      className="w-100 d-flex flex-column"
       grid={{
         gutter: 16,
         xs: 1,

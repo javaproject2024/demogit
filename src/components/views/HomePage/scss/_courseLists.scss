@@ -17,3 +17,8 @@
   transition-property: transform;
   box-sizing: content-box;
 }
+
+.ant-list-pagination {
+  display: flex;
+  justify-content: center;
+}
