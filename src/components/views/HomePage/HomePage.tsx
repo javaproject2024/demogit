@@ -1,4 +1,5 @@
 import CourseLists from "./components/CourseLists";
+import CoursesContent from "./components/CoursesContent";
 import SlideMainContainer from "./components/SlideMainContainer";
 
 function HomePage() {
@@ -9,20 +10,20 @@ function HomePage() {
           <SlideMainContainer />
         </div>
         <div className="py-3">
-          <CourseLists />
+          <CoursesContent />
         </div>
         <div className="py-3">
-          CONTENT 3
+          <CourseLists />
         </div>
         <div className="py-3">
           CONTENT 4
         </div>
-        <div className="py-3">
+        {/* <div className="py-3">
           CONTENT 5
         </div>
         <div className="py-3 ">
           CONTENT 5
-        </div>
+        </div> */}
       </div>
     </div>
   );
