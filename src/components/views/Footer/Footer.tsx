@@ -62,7 +62,7 @@ function Footer() {
                     width: "150px",
                   }}
                   name="f2a53eb0c96c08c"
-                  width="1000px"
+                  width="100%"
                   height="1000px"
                   data-testid="fb:like Facebook Social Plugin"
                   title="fb:like Facebook Social Plugin"

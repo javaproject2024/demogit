@@ -57,6 +57,11 @@ const ListContent = styled(List.Item)`
   }
 `;
 
+const DivSubContent = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+`;
+
 const IconText = ({
   icon,
   text,
@@ -75,12 +80,21 @@ const CoursesContent = () => (
     itemLayout="vertical"
     size="large"
     // bordered
+    grid={{
+      gutter: 16,
+      xs: 1,
+      sm: 1,
+      md: 3,
+      lg: 3,
+      xl: 3,
+      xxl: 3,
+    }}
     split={false}
     pagination={{
       onChange: (page: ReactNode) => {
         console.log(page);
       },
-      pageSize: 5,
+      pageSize: 3,
     }}
     dataSource={data}
     // footer={
@@ -89,28 +103,40 @@ const CoursesContent = () => (
     //   </div>
     // }
 
-    renderItem={(item: ItemProps) => (
+    renderItem={(
+      item: ItemProps,
+      index: number,
+    ) => (
       <ListContent
         style={{
           border: "1px solid black",
+          cursor: "pointer",
+        }}
+        onClick={() => {
+          console.log(index);
         }}
         key={item.title}
         actions={[
-          <IconText
-            icon={StarOutlined}
-            text="156"
-            key="list-vertical-star-o"
-          />,
-          <IconText
-            icon={LikeOutlined}
-            text="156"
-            key="list-vertical-like-o"
-          />,
-          <IconText
-            icon={MessageOutlined}
-            text="2"
-            key="list-vertical-message"
-          />,
+          <div>
+            <IconText
+              icon={StarOutlined}
+              text="156"
+              key="list-vertical-star-o"
+            />
+            ,
+            <IconText
+              icon={LikeOutlined}
+              text="156"
+              key="list-vertical-like-o"
+            />
+            ,
+            <IconText
+              icon={MessageOutlined}
+              text="2"
+              key="list-vertical-message"
+            />
+            ,
+          </div>,
         ]}
         // extra={
         //   <img
@@ -120,7 +146,7 @@ const CoursesContent = () => (
         //   />
         // }
       >
-        <List.Item.Meta
+        {/* <List.Item.Meta
           avatar={
             <Avatar src={item.avatar} />
           }
@@ -130,7 +156,7 @@ const CoursesContent = () => (
             </a>
           }
           description={item.description}
-        />
+        /> */}
         {item.content}
       </ListContent>
     )}
