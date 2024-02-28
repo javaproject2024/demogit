@@ -1,3 +1,4 @@
+import CourseAdviseForm from "./components/CourseAdviseForm";
 import CourseLists from "./components/CourseLists";
 import CoursesContent from "./components/CoursesContent";
 import SlideMainContainer from "./components/SlideMainContainer";
@@ -16,7 +17,7 @@ function HomePage() {
           <CourseLists />
         </div>
         <div className="py-3">
-          CONTENT 4
+          <CourseAdviseForm />
         </div>
         {/* <div className="py-3">
           CONTENT 5
